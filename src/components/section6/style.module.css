@@ -1,0 +1,12 @@
+.title {
+  font-family: VVZOQmVuWHVhblCLlRURg;
+  font-weight: bold;
+  line-height: 1.6;
+  color: rgb(187, 106, 7);
+  text-align: center;
+  font-size: 45px;
+}
+
+.btn-select {
+  @apply bg-[#ebdbbe] text-sm h-11 flex justify-center items-center border border-black w-full md:h-[74px] md:w-[280px] md:mx-auto;
+}

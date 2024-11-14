@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Itim&family=Dancing+Script:wght@400;700&family=Mulish:wght@400;700&family=Play:wght@400;700&family=Philosopher:wght@400;700&family=Quicksand:wght@400;700&family=Montserrat:wght@400;700&family=Niramit:wght@400;700&family=Sriracha&family=Exo:wght@400;700&family=Muli:wght@400;700&family=Roboto:wght@400;700&family=Baloo+Bhaina+2:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,10 +23,19 @@
     format("truetype");
 }
 
+/* img,
+video {
+  max-width: none;
+  height: auto;
+} */
+
 body {
   color: black;
   background: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  padding-bottom: 150px;
+  cursor: grab;
   /* width: 100vw; */
 }
 
@@ -55,22 +66,50 @@ body {
   font-family: VVZOQmVuWHVhblCLlRURg;
 }
 
-#SECTION2 .name {
-  font-family: VVZOQmVuWHVhblCLlRURg;
-  font-size: 35px;
-  color: var(--orange);
+.page-width {
+  max-width: 380px;
+  margin: 0px auto;
 }
 
+.scale {
+  transition: all 300ms;
+}
 
+.scale:hover {
+  transform: scale(1.02);
+}
 
-#SHAPE1 svg:last-child, #SHAPE27 svg:last-child, #SHAPE20 svg:last-child {
-  fill: rgb(0, 0, 0);
-  width: 100%;
-  height: 100%;
+.scale-extra {
+  transition: all 300ms;
+}
+
+.scale-extra:hover {
+  transform: scale(1.05);
+}
+
+.scale-medium {
+  transition: all 300ms;
+}
+
+.scale-medium:hover {
+  transform: scale(1.03);
+}
+
+.section-title {
+  font-family: VVZOQmVuWHVhblCLlRURg;
+  font-weight: bold;
+  line-height: 1.6;
+  color: rgb(187, 106, 7);
+  text-align: center;
+  font-size: 45px;
 }
 
 @media (min-width: 768px) {
   #SECTION1 .section-background {
     background-image: url("/images/HTM08782.JPG");
   }
+
+  .page-width {
+    max-width: 960px;
+  } 
 }

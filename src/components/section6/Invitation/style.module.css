@@ -1,0 +1,57 @@
+.container {
+  @apply border-[#BB6A07] bg-[#F2E9DD] border border-dashed rounded-[10px] py-4 px-3 font-quicksand;
+}
+
+.title {
+  @apply text-[14px] font-bold font-philosopher;
+}
+
+.heart-red {
+  width: 20px;
+  height: 20px;
+}
+.heart-rose {
+  width: 15px;
+  height: 15px;
+  margin-left: -8px;
+}
+
+.heart-rose,
+.heart-red {
+  animation-name: pulse;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

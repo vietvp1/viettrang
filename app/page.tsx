@@ -1,4 +1,10 @@
 "use client";
+import Section1 from "@/src/components/section1";
+import Section2 from "@/src/components/section2";
+import Section3 from "@/src/components/section3";
+import Section4 from "@/src/components/section4";
+import Section5 from "@/src/components/section5";
+import Section6 from "@/src/components/section6";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -23,8 +29,6 @@ export default function Home() {
     setIsPlaying(!isPlaying);
   };
 
-  console.log("isPlaying :>> ", isPlaying);
-
   return (
     <div>
       <div id="header" className="opacity-60 bg-white h-[54px] w-full">
@@ -37,52 +41,17 @@ export default function Home() {
           autoPlay
           src="https://procare.one/wp-content/uploads/2024/05/Shane-Filan-Beautiful-In-White.mp3"
         ></audio>
-        <div id="SECTION1">
-          <div className="section-background"></div>
-        </div>
-        <div id="SECTION2">
-          <div className="text-center">
-            <img src="https://w.ladicdn.com/s800x500/5c728619c417ab07e5194baa/rbg/save-the-date-wavy-elegant-calligraphy-spelling-for-decoration-of-the-wedding-invitation-vector-20240505051834-r7fok.png" />
-            <div className="name flex gap-4 justify-center">
-              <div>Trần Viêt</div>
-              <div>&</div>
-              <div>Huyền Trang</div>
-            </div>
-
-            <div>02 - 12 - 2024</div>
-            <div className="w-[80px] mx-auto">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                preserveAspectRatio="none"
-                viewBox="0 0 431.56 33.43"
-                fill="#000"
-              >
-                <path d="M429.72,8.47C295.35-11.42,4.92,9.92,2,10.14a2.17,2.17,0,0,0,.32,4.32c.4,0,6-.45,15.76-1.09C73.81,9.69,265-1.57,387.89,8.23,313.1,8.08,156,8.84,76.64,17.32c-7.46.8-14.29,1.66-20.24,2.6a2.17,2.17,0,0,0-1.82,2.36,2.11,2.11,0,0,0,2.27,1.94c.85,0,32.67-1.71,75.76-3.12,53.15-1.75,123.45-3.13,174-.65-39.73,0-96.34.52-135.93,3.21-19,1.29-34.1,3.08-41.5,5.55a2.17,2.17,0,0,0,.68,4.22l.26,0c.72-.09,73.16-8.67,133.94-1.28a2.17,2.17,0,0,0,.52-4.3c-9.35-1.14-19-1.9-28.59-2.37,57.57-1.17,116.4-.41,117.46-.39a2.13,2.13,0,0,0,2.19-1.95,2.17,2.17,0,0,0-1.75-2.34c-35.58-6.8-115.86-6.7-184-5.07,114.45-4.37,257.5-3,259.51-2.94h0a2.16,2.16,0,0,0,.32-4.3Z"></path>
-              </svg>
-            </div>
-            <div>
-              Gặp nhiều người ở thời điểm khác nhau cũng không huy hoàng bằng
-              gặp đúng người đúng thời điểm.
-            </div>
-            <div className="grid grid-cols-2 gap-1">
-              <button className="text-white p-1 bg-[#797171]">Thiệp Mời</button>
-              <button className="text-white p-1 bg-[#797171]">
-                Xác nhận tham dự
-              </button>
-              <button className="text-white p-1 bg-[#797171]">
-                Gửi lời chúc
-              </button>
-              <button className="text-white p-1 bg-[#797171]">Mừng cưới</button>
-            </div>
-          </div>
-        </div>
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
       </div>
 
       <div
         id="playMucsic-btn"
-        className="tdk-music cursor-pointer"
+        className={`tdk-music cursor-pointer ${isPlaying ? "playing" : ""}`}
         onClick={toggleMusic}
       >
         <div className="tdk-bg-player"></div>

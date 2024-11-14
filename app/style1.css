@@ -162,6 +162,7 @@
     background-color: rgba(187, 106, 7, 1);
     padding: 0 10px 0 60px;
     border-radius: 30px;
+    font-size: 12px;
   }
 
   .tdk-music.playing .tdk-bg-player {
