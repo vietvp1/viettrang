@@ -8,5 +8,5 @@
 }
 
 .btn-select {
-  @apply bg-[#ebdbbe] text-sm h-11 flex justify-center items-center border border-black w-full md:h-[56px] md:w-[280px] md:mx-auto;
+  @apply bg-[#ebdbbe] text-sm h-11 flex justify-center items-center border border-black w-full md:h-[56px] md:w-[280px] md:mx-auto cursor-pointer;
 }

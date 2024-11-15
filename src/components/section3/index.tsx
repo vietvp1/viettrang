@@ -9,6 +9,7 @@ const Section3 = () => {
       <div className="flex flex-col gap-12">
         <div className="flex flex-col md:flex-row md:gap-7">
           <div
+            aria-description="/images/chure.JPG"
             className="h-[460px] md:h-[550px] bg-cover bg-top scale md:flex-1"
             style={{ backgroundImage: "url('/images/chure.JPG')" }}
           />
@@ -28,6 +29,7 @@ const Section3 = () => {
         </div>
         <div className="flex flex-col md:flex-row-reverse md:gap-7">
           <div
+            aria-description="/images/HTM06698.JPG"
             className="h-[460px] md:h-[550px] bg-cover bg-top scale md:flex-1"
             style={{ backgroundImage: "url('/images/HTM06698.JPG')" }}
           />

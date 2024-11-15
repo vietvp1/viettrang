@@ -9,7 +9,7 @@ const Section4 = () => {
         <div className={"section-title scale hover:text-[#BDA4B3]"}>
           Album Ảnh Cưới
         </div>
-        <div className="flex justify-center">
+        <div aria-description="" className="flex justify-center">
           <Line className="w-[150px] md:w-[300px] h-2 fill-[#BB6A07]" />
         </div>
         <div className="section-sub-heading">
@@ -21,6 +21,7 @@ const Section4 = () => {
             <div className="relative h-full w-[45%]">
               <Image
                 alt=""
+                aria-description="/images/HTM08750.JPG"
                 src="/images/HTM08750.JPG"
                 fill
                 className="object-cover scale"
@@ -30,6 +31,7 @@ const Section4 = () => {
               <div className="flex-1 relative h-full">
                 <Image
                   alt=""
+                  aria-description="/images/HTM08782.JPG"
                   src="/images/HTM08782.JPG"
                   fill
                   className="object-cover scale"
@@ -38,6 +40,7 @@ const Section4 = () => {
               <div className="flex-1 relative h-full">
                 <Image
                   alt=""
+                  aria-description="/images/HTM09645.JPG"
                   src="/images/HTM09645.JPG"
                   fill
                   className="object-cover scale"
@@ -49,6 +52,7 @@ const Section4 = () => {
             <div className="relative h-full w-[45%]">
               <Image
                 alt=""
+                aria-description="/images/HTM09351.JPG"
                 src="/images/HTM09351.JPG"
                 fill
                 className="object-cover scale"
@@ -58,6 +62,7 @@ const Section4 = () => {
               <div className="flex-1 relative h-full">
                 <Image
                   alt=""
+                  aria-description="/images/HTM07566.JPG"
                   src="/images/HTM07566.JPG"
                   fill
                   className="object-cover scale"
@@ -66,6 +71,7 @@ const Section4 = () => {
               <div className="flex-1 relative h-full">
                 <Image
                   alt=""
+                  aria-description="/images/HTM09667.JPG"
                   src="/images/HTM09667.JPG"
                   fill
                   className="object-cover scale"
@@ -77,6 +83,7 @@ const Section4 = () => {
             <div className="flex-1 relative h-full">
               <Image
                 alt=""
+                aria-description="/images/HTM08750.JPG"
                 src="/images/HTM08750.JPG"
                 fill
                 className="object-cover scale"
@@ -85,6 +92,7 @@ const Section4 = () => {
             <div className="flex-1 relative h-full">
               <Image
                 alt=""
+                aria-description="/images/HTM08270.JPG"
                 src="/images/HTM08270.JPG"
                 fill
                 className="object-cover scale"
@@ -93,6 +101,7 @@ const Section4 = () => {
             <div className="flex-1 relative h-full">
               <Image
                 alt=""
+                aria-description="/images/HTM08827.JPG"
                 src="/images/HTM08827.JPG"
                 fill
                 className="object-cover scale"
@@ -101,6 +110,7 @@ const Section4 = () => {
             <div className="flex-1 relative h-full">
               <Image
                 alt=""
+                aria-description="/images/HTM08244.JPG"
                 src="/images/HTM08244.JPG"
                 fill
                 className="object-cover scale"

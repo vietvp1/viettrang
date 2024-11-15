@@ -1,0 +1,37 @@
+.container {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("/images/HTM08806.JPG");
+  background-size: cover;
+  background-position: center;
+  padding: 48px 0px;
+}
+
+.box {
+  position: relative;
+  width: 121px;
+  height: 86px;
+  background-color: #8a4f07;
+  box-shadow: rgb(0, 0, 0) 5px 15px 10px -15px;
+  opacity: 0.8;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @apply mt-[80px] mb-[50px] md:w-[225px] md:h-[160px] md:mt-[140px] md:mb-[100px];
+}
+
+.qr-box {
+  @apply flex-1 border border-[#E7E7E7] rounded-[5px] text-center px-2 py-2;
+}
+
+.qr-image {
+  @apply w-[148px] h-[160px] relative border border-black p-1 rounded-md mx-auto mt-2;
+}
+
+.qr-action-btn {
+  @apply flex-1 text-[11px] h-[24px] flex justify-center items-center bg-[#DEDEDE] rounded-xl cursor-pointer
+}

@@ -24,6 +24,8 @@ export default {
       'philosopher': ['Philosopher', 'sans-serif'],
       'exo': ['Exo', 'sans-serif'],
       'sriracha': ['Sriracha', 'cursive'],
+      'baloo': ['Baloo Bhaina 2', 'cursive'],
+      'roboto': ['Roboto', 'sans-serif'],
     }
   },
   plugins: [],

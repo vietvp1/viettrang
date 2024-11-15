@@ -37,6 +37,7 @@ const Section8 = () => {
             <Image
               alt=""
               src="/images/HTM09667.JPG"
+              aria-description="/images/HTM09667.JPG"
               fill
               className="object-cover scale rounded-xl"
             />

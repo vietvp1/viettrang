@@ -1,4 +1,5 @@
 "use client";
+import { VTVModal } from "@/components/common/modal";
 import Section1 from "@/components/section1";
 import Section2 from "@/components/section2";
 import Section3 from "@/components/section3";
@@ -8,10 +9,16 @@ import Section6 from "@/components/section6";
 import Section7 from "@/components/section7";
 import Section8 from "@/components/section8";
 import ThankYou from "@/components/thankyou";
+import WeddingGift from "@/components/WeddingGift";
+import QR from "@/components/WeddingGift/QR";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOverflowAuto, setIsOverflowAuto] = useState(true);
+  const [content, setContent] = useState<any>(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,6 +39,25 @@ export default function Home() {
     setIsPlaying(!isPlaying);
   };
 
+  const onClickImage = (e: any) => {
+    if (e.target?.id === "gift-box") {
+      setIsOverflowAuto(false);
+      setContent(<QR />);
+      setIsOpen(true);
+      return;
+    }
+
+    setIsOverflowAuto(true);
+    const ariaDescription = e?.target?.getAttribute("aria-description");
+    if (!ariaDescription) return;
+    setContent(
+      <div className="relative w-[360px] md:w-[650px] h-[70vh]">
+        <Image className="object-contain" fill alt="" src={ariaDescription} />
+      </div>
+    );
+    setIsOpen(true);
+  };
+
   return (
     <div>
       <div id="header" className="opacity-60 bg-white h-[54px] w-full">
@@ -39,7 +65,7 @@ export default function Home() {
           <div id="logo" className="w-10 h-10"></div>
         </div>
       </div>
-      <div>
+      <div onClick={onClickImage}>
         <audio
           id="musicPlayer"
           loop
@@ -54,6 +80,7 @@ export default function Home() {
         <Section6 />
         <Section7 />
         <Section8 />
+        <WeddingGift />
         <ThankYou />
       </div>
 
@@ -63,7 +90,7 @@ export default function Home() {
         onClick={toggleMusic}
       >
         <div className="tdk-bg-player"></div>
-        <div className="tdk-player-text">Phát Nhạc</div>
+        {/* <div className="tdk-player-text">Phát Nhạc</div> */}
 
         {isPlaying ? (
           <svg
@@ -116,6 +143,17 @@ export default function Home() {
           🤍
         </div>
       </div>
+
+      {isOpen && (
+        <VTVModal
+          closeModal={() => {
+            setIsOpen(false);
+            setContent(null);
+          }}
+          content={content}
+          isOverflowAuto={isOverflowAuto}
+        />
+      )}
     </div>
   );
 }

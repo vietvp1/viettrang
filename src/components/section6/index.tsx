@@ -12,8 +12,6 @@ enum CardType {
 const Section6 = () => {
   const [type, setType] = useState<CardType>(CardType.MAN);
 
-  console.log("type :>> ", type);
-
   return (
     <div
       style={{

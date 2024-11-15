@@ -35,7 +35,6 @@ body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   padding-bottom: 80px;
-  cursor: grab;
   /* width: 100vw; */
 }
 
@@ -121,4 +120,20 @@ body {
   .section-title {
     font-size: 65px;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-white dark:bg-[#393C42];
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
 }
