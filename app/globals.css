@@ -34,7 +34,7 @@ body {
   background: white;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
   cursor: grab;
   /* width: 100vw; */
 }
@@ -99,9 +99,14 @@ body {
   font-family: VVZOQmVuWHVhblCLlRURg;
   font-weight: bold;
   line-height: 1.6;
-  color: rgb(187, 106, 7);
+  color: #bb6a07;
   text-align: center;
   font-size: 45px;
+}
+
+.section-sub-heading {
+  font-size: 13px;
+  @apply text-[#BB6A07] text-center w-[326px] mx-auto mt-2 md:mt-4 scale md:text-[20px] md:w-full;
 }
 
 @media (min-width: 768px) {
@@ -111,5 +116,9 @@ body {
 
   .page-width {
     max-width: 960px;
-  } 
+  }
+
+  .section-title {
+    font-size: 65px;
+  }
 }

@@ -46,14 +46,14 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           </div>
         </div>
       </div>
-      <div className="text-[15px] text-center mt-3">
+      <div className="text-[15px] text-center mt-3 md:mt-6">
         <div className="font-bold">TRÂN TRỌNG KÍNH MỜI</div>
         <div className="mt-1">Bạn + người thương</div>
         <div className="text-[13px] w-[280px] mx-auto mt-[6px]">
           TỚI DỰ BỮA CƠM THÂN MẬT VÀ CHUNG VUI CÙNG GIA ĐÌNH MÌNH
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center mt-1">
+      <div className="flex flex-col justify-center items-center mt-1 md:mt-5">
         <div className="font-dancing text-[30px] text-[#E83B30] font-bold">
           {family1.name}
         </div>
@@ -107,7 +107,7 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           {family2.name}
         </div>
       </div>
-      <div className="text-center mt-1">
+      <div className="text-center mt-1 md:mt-5">
         <div>ĐƯỢC TỔ CHỨC VÀO HỒI</div>
         <div className="font-bold text-[14px]">{family1.time}</div>
         <div className="flex gap-2 justify-center items-center -mt-4">
@@ -122,12 +122,12 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           </div>
         </div>
         <div className="font-niramit -mt-3 text-[14px]">{family1.lunar}</div>
-        <div className="text-[#5E5E5E] text-[14px] mt-3">
+        <div className="text-[#5E5E5E] text-[14px] mt-3 md:mt-10">
           <div className="font-niramit uppercase">
             TẠI: TƯ GIA {family1.title}
           </div>
           <div className="font-itim">{family1.address2}</div>
-          <div className="underline mt-1 font-dancing text-[18px] font-bold">
+          <div className="underline mt-1 md:mt-3 font-dancing text-[18px] font-bold">
             Rất hân hạnh được đón tiếp
           </div>
         </div>

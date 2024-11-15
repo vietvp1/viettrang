@@ -10,13 +10,13 @@ const Section4 = () => {
           Album Ảnh Cưới
         </div>
         <div className="flex justify-center">
-          <Line className="w-[150px] h-2 fill-[#BB6A07]" />
+          <Line className="w-[150px] md:w-[300px] h-2 fill-[#BB6A07]" />
         </div>
-        <div className="text-[#BB6A07] text-[13px] text-center w-[326px] mx-auto mt-2 scale">
+        <div className="section-sub-heading">
           Hãy để tình yêu diễn biến thật tự nhiên, đã là duyên thì cũng chẳng sợ
           lạc đường
         </div>
-        <div className="mt-7 flex flex-col gap-2 md:gap-4">
+        <div className="mt-7 md:mt-10 flex flex-col gap-2 md:gap-4">
           <div className="flex gap-2 md:gap-4 h-[280px] md:h-[676px]">
             <div className="relative h-full w-[45%]">
               <Image

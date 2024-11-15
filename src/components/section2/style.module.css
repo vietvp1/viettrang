@@ -7,7 +7,6 @@
 .date {
   font-family: Itim, cursive;
   font-size: 18px;
-
 }
 
 .btn {
@@ -20,5 +19,11 @@
 }
 
 @media (min-width: 768px) {
-  
+  .name {
+    font-size: 50px;
+  }
+
+  .date {
+    font-size: 30px;
+  }
 }

@@ -22,6 +22,8 @@ export default {
       'montserrat': ['Montserrat', 'sans-serif'],
       'quicksand': ['Quicksand', 'sans-serif'],
       'philosopher': ['Philosopher', 'sans-serif'],
+      'exo': ['Exo', 'sans-serif'],
+      'sriracha': ['Sriracha', 'cursive'],
     }
   },
   plugins: [],

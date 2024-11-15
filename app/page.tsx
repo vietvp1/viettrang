@@ -1,10 +1,13 @@
 "use client";
-import Section1 from "@/src/components/section1";
-import Section2 from "@/src/components/section2";
-import Section3 from "@/src/components/section3";
-import Section4 from "@/src/components/section4";
-import Section5 from "@/src/components/section5";
-import Section6 from "@/src/components/section6";
+import Section1 from "@/components/section1";
+import Section2 from "@/components/section2";
+import Section3 from "@/components/section3";
+import Section4 from "@/components/section4";
+import Section5 from "@/components/section5";
+import Section6 from "@/components/section6";
+import Section7 from "@/components/section7";
+import Section8 from "@/components/section8";
+import ThankYou from "@/components/thankyou";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -32,7 +35,9 @@ export default function Home() {
   return (
     <div>
       <div id="header" className="opacity-60 bg-white h-[54px] w-full">
-        <div id="logo" className="w-12 h-12"></div>
+        <div className="page-width flex items-center h-full">
+          <div id="logo" className="w-10 h-10"></div>
+        </div>
       </div>
       <div>
         <audio
@@ -47,6 +52,9 @@ export default function Home() {
         <Section4 />
         <Section5 />
         <Section6 />
+        <Section7 />
+        <Section8 />
+        <ThankYou />
       </div>
 
       <div
@@ -98,14 +106,14 @@ export default function Home() {
         <div className="snowflake" style={{ fontSize: "15px" }}>
           ❤️
         </div>
-        <div className="snowflake" style={{ fontSize: "22px" }}>
-          ♥️
+        <div className="snowflake text-white" style={{ fontSize: "16px" }}>
+          🤍
         </div>
-        <div className="snowflake" style={{ fontSize: "18px" }}>
-          ♥️
+        <div className="snowflake" style={{ fontSize: "14px" }}>
+          🤍
         </div>
-        <div className="snowflake" style={{ fontSize: "15px" }}>
-          ♥️
+        <div className="snowflake" style={{ fontSize: "12px" }}>
+          🤍
         </div>
       </div>
     </div>

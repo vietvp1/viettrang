@@ -8,9 +8,9 @@ const Section5 = () => {
           Video Cưới
         </div>
         <div className="flex justify-center">
-          <Line className="w-[100px] -mt-3 h-2 fill-[#BB6A07]" />
+          <Line className="w-[100px] md:w-[150px] -mt-3 h-2 fill-[#BB6A07]" />
         </div>
-        <div className="text-[#BB6A07] text-[13px] text-center w-[326px] mx-auto mt-2 scale">
+        <div className="section-sub-heading">
           Cảm ơn đời mỗi sớm mai thức dậy, ta có thêm ngày nữa để yêu thương.
         </div>
         <div className="mt-7 flex flex-col gap-2">

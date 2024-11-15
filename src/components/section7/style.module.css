@@ -1,0 +1,22 @@
+.container {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("/images/HTM08806.JPG");
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  box-shadow: 0px 15px 20px -15px rgb(0, 0, 0);
+  @apply h-[30px] md:h-[38px] md:w-[232px] md:text-[14px] text-xs bg-[#A6A5A4] hover:bg-[#D4DADC] text-white flex items-center w-[178px] justify-center rounded-3xl border border-gray-400;
+}
+
+.countdown-box {
+  @apply flex bg-white flex-col items-center w-[60px] md:w-[84px] md:h-[84px] h-[65px] rounded-md
+}
+
+.event-container {
+  @apply border-2 border-dashed border-[rgba(0,0,0,.15)] rounded-[10px] pt-3 pb-5 text-center md:px-4
+}

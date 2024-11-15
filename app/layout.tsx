@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Việt ❤ Trang",
-  description: "Việt Trang Wedding",
+  description: "Happy Wedding - Trần Việt & Huyền Trang ❤❤❤",
 };
 
 export default function RootLayout({

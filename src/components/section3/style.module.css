@@ -11,5 +11,15 @@
 
 .name:hover {
   transform: scale(1.05);
-color: var(--orange);
+  color: var(--orange);
+}
+
+@media (min-width: 768px) {
+  .name {
+    font-size: 45px;
+  }
+
+  .infor {
+    margin-top: 70px;
+  }
 }
