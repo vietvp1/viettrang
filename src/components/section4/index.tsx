@@ -1,6 +1,6 @@
 import Image from "next/image";
+import AnimateOnScroll from "../common/AnimateOnScroll";
 import Line from "../icons/Line";
-import style from "./style.module.css";
 
 const Section4 = () => {
   return (
@@ -18,7 +18,7 @@ const Section4 = () => {
         </div>
         <div className="mt-7 md:mt-10 flex flex-col gap-2 md:gap-4">
           <div className="flex gap-2 md:gap-4 h-[280px] md:h-[676px]">
-            <div className="relative h-full w-[45%]">
+            <AnimateOnScroll className="relative h-full w-[45%]">
               <Image
                 alt=""
                 aria-description="/images/HTM08750.JPG"
@@ -26,9 +26,12 @@ const Section4 = () => {
                 fill
                 className="object-cover scale"
               />
-            </div>
+            </AnimateOnScroll>
             <div className="flex-1 flex flex-col gap-2 md:gap-4">
-              <div className="flex-1 relative h-full">
+              <AnimateOnScroll
+                className="flex-1 relative h-full"
+                animationType="fadeInRight"
+              >
                 <Image
                   alt=""
                   aria-description="/images/HTM08782.JPG"
@@ -36,8 +39,11 @@ const Section4 = () => {
                   fill
                   className="object-cover scale"
                 />
-              </div>
-              <div className="flex-1 relative h-full">
+              </AnimateOnScroll>
+              <AnimateOnScroll
+                className="flex-1 relative h-full"
+                animationType="fadeInRight"
+              >
                 <Image
                   alt=""
                   aria-description="/images/HTM09645.JPG"
@@ -45,11 +51,14 @@ const Section4 = () => {
                   fill
                   className="object-cover scale"
                 />
-              </div>
+              </AnimateOnScroll>
             </div>
           </div>
           <div className="flex gap-2 md:gap-4 h-[280px] md:h-[676px] flex-row-reverse">
-            <div className="relative h-full w-[45%]">
+            <AnimateOnScroll
+              animationType="fadeInRight"
+              className="relative h-full w-[45%]"
+            >
               <Image
                 alt=""
                 aria-description="/images/HTM09351.JPG"
@@ -57,9 +66,9 @@ const Section4 = () => {
                 fill
                 className="object-cover scale"
               />
-            </div>
+            </AnimateOnScroll>
             <div className="flex-1 flex flex-col gap-2 md:gap-4">
-              <div className="flex-1 relative h-full">
+              <AnimateOnScroll className="flex-1 relative h-full">
                 <Image
                   alt=""
                   aria-description="/images/HTM07566.JPG"
@@ -67,8 +76,8 @@ const Section4 = () => {
                   fill
                   className="object-cover scale"
                 />
-              </div>
-              <div className="flex-1 relative h-full">
+              </AnimateOnScroll>
+              <AnimateOnScroll className="flex-1 relative h-full">
                 <Image
                   alt=""
                   aria-description="/images/HTM09667.JPG"
@@ -76,11 +85,14 @@ const Section4 = () => {
                   fill
                   className="object-cover scale"
                 />
-              </div>
+              </AnimateOnScroll>
             </div>
           </div>
           <div className="flex gap-2 md:gap-4 h-[140px] md:h-[334px]">
-            <div className="flex-1 relative h-full">
+            <AnimateOnScroll
+              animationType="fadeInUp"
+              className="flex-1 relative h-full"
+            >
               <Image
                 alt=""
                 aria-description="/images/HTM08750.JPG"
@@ -88,8 +100,11 @@ const Section4 = () => {
                 fill
                 className="object-cover scale"
               />
-            </div>
-            <div className="flex-1 relative h-full">
+            </AnimateOnScroll>
+            <AnimateOnScroll
+              animationType="fadeInUp"
+              className="flex-1 relative h-full"
+            >
               <Image
                 alt=""
                 aria-description="/images/HTM08270.JPG"
@@ -97,8 +112,11 @@ const Section4 = () => {
                 fill
                 className="object-cover scale"
               />
-            </div>
-            <div className="flex-1 relative h-full">
+            </AnimateOnScroll>
+            <AnimateOnScroll
+              animationType="fadeInUp"
+              className="flex-1 relative h-full"
+            >
               <Image
                 alt=""
                 aria-description="/images/HTM08827.JPG"
@@ -106,8 +124,11 @@ const Section4 = () => {
                 fill
                 className="object-cover scale"
               />
-            </div>
-            <div className="flex-1 relative h-full">
+            </AnimateOnScroll>
+            <AnimateOnScroll
+              animationType="fadeInUp"
+              className="flex-1 relative h-full"
+            >
               <Image
                 alt=""
                 aria-description="/images/HTM08244.JPG"
@@ -115,7 +136,7 @@ const Section4 = () => {
                 fill
                 className="object-cover scale"
               />
-            </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </div>

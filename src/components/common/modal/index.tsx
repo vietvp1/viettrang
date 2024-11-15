@@ -57,7 +57,7 @@ export const VTVModal: React.FC<IVTVModal> = (props) => {
       </div>
       <div className="py-9 bg-white text-theme-text relative rounded-xl">
         <div
-          className={`max-w-[400px] md:max-w-[800px] max-h-[71vh] px-[6px] md:px-3 ${
+          className={`max-w-[400px] md:max-w-[800px] max-h-[90h] px-[6px] md:px-3 ${
             isOverflowAuto ? "overflow-auto" : ""
           }`}
         >
