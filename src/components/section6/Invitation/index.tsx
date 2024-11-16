@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./style.module.css";
+import AnimateOnScroll from "@/components/common/AnimateOnScroll";
 
 type IFamily = {
   name: string;
@@ -25,7 +26,7 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
   return (
     <div className={style.container}>
       <div className="flex gap-[1px] w-full">
-        <div className="flex-1 text-center relative after:absolute after:border-r-[1px] after:h-[72%] after:right-0 after:top-[10px] after:border-black">
+        <AnimateOnScroll className="flex-1 text-center relative after:absolute after:border-r-[1px] after:h-[72%] after:right-0 after:top-[10px] after:border-black">
           <div className={style.title}>{family1.title}</div>
           <div className="text-[13px] font-bold mt-1">
             Bố: {family1.fatherName}
@@ -34,8 +35,11 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           <div className="text-[13px] whitespace-pre-line">
             {family1.address1}
           </div>
-        </div>
-        <div className="flex-1 text-center">
+        </AnimateOnScroll>
+        <AnimateOnScroll
+          animationType="fadeInRight"
+          className="flex-1 text-center"
+        >
           <div className={style.title}>{family2.title}</div>
           <div className="text-[13px] font-bold mt-1">
             Bố: {family2.fatherName}
@@ -44,19 +48,23 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           <div className="text-[13px] whitespace-pre-line">
             {family2.address1}
           </div>
-        </div>
+        </AnimateOnScroll>
       </div>
       <div className="text-[15px] text-center mt-3 md:mt-6">
-        <div className="font-bold">TRÂN TRỌNG KÍNH MỜI</div>
-        <div className="mt-1">Bạn + người thương</div>
-        <div className="text-[13px] w-[280px] mx-auto mt-[6px]">
-          TỚI DỰ BỮA CƠM THÂN MẬT VÀ CHUNG VUI CÙNG GIA ĐÌNH MÌNH
-        </div>
+        <AnimateOnScroll animationType="fadeInDown" className="font-bold">
+          TRÂN TRỌNG KÍNH MỜI
+        </AnimateOnScroll>
+        <AnimateOnScroll animationType="fadeInUp">
+          <div className="mt-1">Bạn + người thương</div>
+          <div className="text-[13px] w-[280px] mx-auto mt-[6px]">
+            TỚI DỰ BỮA CƠM THÂN MẬT VÀ CHUNG VUI CÙNG GIA ĐÌNH MÌNH
+          </div>
+        </AnimateOnScroll>
       </div>
       <div className="flex flex-col justify-center items-center mt-1 md:mt-5">
-        <div className="font-dancing text-[30px] text-[#E83B30] font-bold">
+        <AnimateOnScroll className="font-dancing text-[30px] text-[#E83B30] font-bold">
           {family1.name}
-        </div>
+        </AnimateOnScroll>
         <div className="flex items-end">
           <div className={style["heart-red"]}>
             <svg
@@ -103,11 +111,11 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
             </svg>
           </div>
         </div>
-        <div className="font-dancing text-[30px] text-[#E83B30] font-bold">
+        <AnimateOnScroll animationType="fadeInRight" className="font-dancing text-[30px] text-[#E83B30] font-bold">
           {family2.name}
-        </div>
+        </AnimateOnScroll>
       </div>
-      <div className="text-center mt-1 md:mt-5">
+      <AnimateOnScroll animationType="fadeInUp" className="text-center mt-1 md:mt-5">
         <div>ĐƯỢC TỔ CHỨC VÀO HỒI</div>
         <div className="font-bold text-[14px]">{family1.time}</div>
         <div className="flex gap-2 justify-center items-center -mt-4">
@@ -131,7 +139,7 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
             Rất hân hạnh được đón tiếp
           </div>
         </div>
-      </div>
+      </AnimateOnScroll>
     </div>
   );
 };

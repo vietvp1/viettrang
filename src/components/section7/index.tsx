@@ -5,6 +5,7 @@ import style from "./style.module.css";
 import moment from "moment-timezone";
 import { FAMILY_DATA } from "@/constants";
 import EventWedding from "./EventWedding";
+import AnimateOnScroll from "../common/AnimateOnScroll";
 
 interface ISection7 {}
 
@@ -12,15 +13,19 @@ const Section7: React.FC<ISection7> = () => {
   return (
     <div id="SECTION7" className={style.container}>
       <div className="page-width pt-6 pb-12">
-        <div className={"section-title scale hover:text-[#BDA4B3]"}>
-          Sự Kiện Cưới
-        </div>
-        <div className="flex justify-center">
-          <Line className="w-[100px] md:w-[150px] -mt-3 h-2 fill-[#BB6A07]" />
-        </div>
-        <div className="section-sub-heading !text-[15px] md:!text-[20px]">
-          Cùng đếm ngược thời gian cùng chúng tôi nhé!
-        </div>
+        <AnimateOnScroll animationType="fadeInRight">
+          <div className={"section-title scale hover:text-[#BDA4B3]"}>
+            Sự Kiện Cưới
+          </div>
+          <div className="flex justify-center">
+            <Line className="w-[100px] md:w-[150px] -mt-3 h-2 fill-[#BB6A07]" />
+          </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <div className="section-sub-heading !text-[15px] md:!text-[20px]">
+            Cùng đếm ngược thời gian cùng chúng tôi nhé!
+          </div>
+        </AnimateOnScroll>
         <div className="mt-7 flex flex-col md:flex-row gap-6 md:gap-12">
           <div className="md:flex-1">
             <EventWedding

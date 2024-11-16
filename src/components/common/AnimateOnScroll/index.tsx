@@ -1,8 +1,8 @@
 // components/AnimateOnScroll.tsx
-import { motion, MotionProps } from "framer-motion";
+import { motion, MotionProps, MotionStyle } from "framer-motion";
 
-type AnimateOnScrollProps = {
-  children: React.ReactNode;
+interface AnimateOnScrollProps {
+  children?: React.ReactNode;
   animationType?:
     | "fadeInUp"
     | "fadeInDown"
@@ -15,21 +15,26 @@ type AnimateOnScrollProps = {
   delay?: number; // Độ trễ animation (giây)
   iterationCount?: number; // Số lần lặp lại animation
   className?: string;
-};
+  style?: MotionStyle;
+  ease?: "linear";
+}
 
 const animationVariants = {
-  fadeInUp: { initial: { opacity: 0, y: 50 }, animate: { opacity: 1, y: 0 } },
+  fadeInUp: {
+    initial: { opacity: 0, translateY: "20px" },
+    animate: { opacity: 1, translateY: 0 },
+  },
   fadeInDown: {
-    initial: { opacity: 0, y: -50 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0, translateY: "-20px" },
+    animate: { opacity: 1, translateY: 0 },
   },
   fadeInLeft: {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0 },
+    initial: { opacity: 0, translateX: "-20px" },
+    animate: { opacity: 1, translateX: 0 },
   },
   fadeInRight: {
-    initial: { opacity: 0, x: 50 },
-    animate: { opacity: 1, x: 0 },
+    initial: { opacity: 0, translateX: "20px" },
+    animate: { opacity: 1, translateX: 0 },
   },
   fadeIn: { initial: { opacity: 0 }, animate: { opacity: 1 } },
   zoomIn: {
@@ -47,7 +52,9 @@ const AnimateOnScroll = ({
   animationType = "fadeInLeft", // Kiểu animation mặc định
   duration = 1,
   delay = 0.2,
+  ease = "linear",
   className,
+  style,
 }: AnimateOnScrollProps) => {
   const { initial, animate } =
     animationVariants[animationType] || animationVariants.fadeInUp;
@@ -56,9 +63,10 @@ const AnimateOnScroll = ({
     <motion.div
       initial={initial}
       whileInView={animate}
-      transition={{ duration, delay }}
+      transition={{ duration, delay, ease: "linear" }}
       viewport={{ once: true }} // Chạy animation một lần khi vào viewport
       className={className}
+      style={style}
     >
       {children}
     </motion.div>

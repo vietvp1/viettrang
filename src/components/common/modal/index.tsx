@@ -1,14 +1,14 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import Modal from "react-modal";
 
-interface IVTVModal {
+interface IVTVModal extends PropsWithChildren {
   closeModal: () => void;
-  content: JSX.Element;
+  content?: JSX.Element;
   isOverflowAuto?: boolean;
 }
 
 export const VTVModal: React.FC<IVTVModal> = (props) => {
-  const { closeModal, content, isOverflowAuto = true } = props;
+  const { closeModal, content, children, isOverflowAuto = true } = props;
 
   return (
     <Modal
@@ -61,7 +61,7 @@ export const VTVModal: React.FC<IVTVModal> = (props) => {
             isOverflowAuto ? "overflow-auto" : ""
           }`}
         >
-          {content}
+          {content || children}
         </div>
       </div>
     </Modal>

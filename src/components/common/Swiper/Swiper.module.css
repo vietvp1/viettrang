@@ -1,0 +1,65 @@
+.swiperCommon {
+  position: relative;
+  width: 100%;
+}
+
+.swiperCommon > div {
+  position: static !important;
+}
+
+.swiperCommon :global(.swiper-slide) {
+  height: auto;
+}
+
+.swiperCommon :global(.swiper-button-disabled) {
+  pointer-events: auto;
+  cursor: not-allowed;
+}
+
+.swiperCommon :global(.swiper-button-prev),
+.swiperCommon :global(.swiper-button-next) {
+  user-select: none;
+}
+
+.swiperCommon :global(.swiper-button-prev)::after,
+.swiperCommon :global(.swiper-button-next)::after {
+  color: black;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.swiperCommon :global(.swiper-pagination) {
+  position: static;
+}
+
+.swiperCommon :global(.swiper-pagination) span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 2px 2px 0px !important;
+  border-radius: 100%;
+  background-color: #e8e8e8;
+  opacity: 1;
+}
+
+.swiperCommon
+  :global(.swiper-pagination)
+  :global(.swiper-pagination-bullet-active) {
+  background-color: #b9b9b9;
+}
+
+@media (min-width: 768px) {
+  .swiperCommon :global(.swiper-pagination) span {
+    width: 10px;
+    height: 10px;
+    margin: 12px 2.5px 0px !important;
+  }
+
+  .blur-navigation-enable .left-blur {
+    width: 80px;
+  }
+
+  .blur-navigation-enable .right-blur {
+    width: 80px;
+  }
+}
