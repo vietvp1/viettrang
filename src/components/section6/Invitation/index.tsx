@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./style.module.css";
 import AnimateOnScroll from "@/components/common/AnimateOnScroll";
+import { useSearchParams } from "next/navigation";
 
 type IFamily = {
   name: string;
@@ -23,6 +24,9 @@ interface IInvitation {
 }
 
 const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
+  const searchParams = useSearchParams();
+  const name = searchParams.get("name");
+
   return (
     <div className={style.container}>
       <div className="flex gap-[1px] w-full">
@@ -55,7 +59,7 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           TRÂN TRỌNG KÍNH MỜI
         </AnimateOnScroll>
         <AnimateOnScroll animationType="fadeInUp">
-          <div className="mt-1">Bạn + người thương</div>
+          <div className="mt-1">{name || "Bạn + người thương"}</div>
           <div className="text-[13px] w-[280px] mx-auto mt-[6px]">
             TỚI DỰ BỮA CƠM THÂN MẬT VÀ CHUNG VUI CÙNG GIA ĐÌNH MÌNH
           </div>
@@ -111,11 +115,17 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
             </svg>
           </div>
         </div>
-        <AnimateOnScroll animationType="fadeInRight" className="font-dancing text-[30px] text-[#E83B30] font-bold">
+        <AnimateOnScroll
+          animationType="fadeInRight"
+          className="font-dancing text-[30px] text-[#E83B30] font-bold"
+        >
           {family2.name}
         </AnimateOnScroll>
       </div>
-      <AnimateOnScroll animationType="fadeInUp" className="text-center mt-1 md:mt-5">
+      <AnimateOnScroll
+        animationType="fadeInUp"
+        className="text-center mt-1 md:mt-5"
+      >
         <div>ĐƯỢC TỔ CHỨC VÀO HỒI</div>
         <div className="font-bold text-[14px]">{family1.time}</div>
         <div className="flex gap-2 justify-center items-center -mt-4">
