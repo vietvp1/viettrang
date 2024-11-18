@@ -66,7 +66,7 @@ export default function Home() {
         <ThankYou />
       </div>
       <MusicWedding />
-      <div className="snowflakes" aria-hidden="true">
+      {/* <div className="snowflakes" aria-hidden="true">
         <div className="snowflake" style={{ fontSize: "20px" }}>
           ♥️
         </div>
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="snowflake" style={{ fontSize: "12px" }}>
           🤍
         </div>
-      </div>
+      </div> */}
 
       {isOpen && (
         <VTVModal
