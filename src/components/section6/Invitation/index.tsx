@@ -59,7 +59,7 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           TRÂN TRỌNG KÍNH MỜI
         </AnimateOnScroll>
         <AnimateOnScroll animationType="fadeInUp">
-          <div className="mt-1">{name || "Bạn + người thương"}</div>
+          <div className="mt-1">{name?.split('_').join(' ') || "Bạn + người thương"}</div>
           <div className="text-[13px] w-[280px] mx-auto mt-[6px]">
             TỚI DỰ BỮA CƠM THÂN MẬT VÀ CHUNG VUI CÙNG GIA ĐÌNH MÌNH
           </div>
