@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import style from "./style.module.css";
 import AnimateOnScroll from "@/components/common/AnimateOnScroll";
 import { useSearchParams } from "next/navigation";
@@ -59,7 +59,9 @@ const Invitation: React.FC<IInvitation> = ({ family1, family2 }) => {
           TRÂN TRỌNG KÍNH MỜI
         </AnimateOnScroll>
         <AnimateOnScroll animationType="fadeInUp">
-          <div className="mt-1">{name?.split('_').join(' ') || "Bạn + người thương"}</div>
+          <div className="mt-1 font-dancing text-[26px] font-bold">
+            {name?.split("_").join(" ") || "Bạn + người thương"}
+          </div>
           <div className="text-[13px] w-[280px] mx-auto mt-[6px]">
             TỚI DỰ BỮA CƠM THÂN MẬT VÀ CHUNG VUI CÙNG GIA ĐÌNH MÌNH
           </div>

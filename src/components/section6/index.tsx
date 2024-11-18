@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Line from "../icons/Line";
 import Invitation from "./Invitation";
 import style from "./style.module.css";
@@ -65,18 +65,20 @@ const Section6 = () => {
                     type !== item ? "hidden" : ""
                   } md:flex-1 w-full md:block`}
                 >
-                  <Invitation
-                    family1={
-                      isGroom
-                        ? FAMILY_DATA.groomFamily
-                        : FAMILY_DATA.brideFamily
-                    }
-                    family2={
-                      isGroom
-                        ? FAMILY_DATA.brideFamily
-                        : FAMILY_DATA.groomFamily
-                    }
-                  />
+                  <Suspense>
+                    <Invitation
+                      family1={
+                        isGroom
+                          ? FAMILY_DATA.groomFamily
+                          : FAMILY_DATA.brideFamily
+                      }
+                      family2={
+                        isGroom
+                          ? FAMILY_DATA.brideFamily
+                          : FAMILY_DATA.groomFamily
+                      }
+                    />
+                  </Suspense>
                 </div>
               );
             })}
