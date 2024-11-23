@@ -52,6 +52,7 @@ const Section5 = () => {
               controls
               className="h-full mx-auto"
               loop
+              muted
               playsInline
             >
               <source src="images/videovt.mp4" type="video/mp4" />
